@@ -20,12 +20,20 @@ public class SignUpTest extends BaseTest {
         Assert.assertTrue(signUpPage.isAutentificareButtonDisplayed(), "Button is not displayed");
         sleep (3000);
 
-        LOG.info("Click button");
+        LOG.info("Click 'Autentificare' button");
         signUpPage.clickAutentificareButton();
         sleep (3000);
 
         LOG.info("Complete the 'Adresa de Email' field");
         signUpPage.typeInAdresaDeEmailField(email);
+        sleep (3000);
+
+        LOG.info("Click 'Continua' button");
+        signUpPage.clickContinuaButton();
+        sleep (3000);
+
+        LOG.info("Click 'Sunt de acord' button");
+        signUpPage.clickSuntDeAcordButton();
         sleep (3000);
 
 

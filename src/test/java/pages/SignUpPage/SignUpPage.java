@@ -22,7 +22,8 @@ public class SignUpPage extends BasePage {
 
     private By autentificareButton = By.xpath("//a[@title='Autentificare']/div[2]");
     private By adresaDeEmailField = By.xpath("//input[@type='email']");
-    private By continuaButton = By.
+    private By continuaButton = By.xpath("//button[@class='Button js-authSubmitButton']");
+    private By suntDeAcordButton = By.xpath("//button[@type='submit']");
 
     public boolean isAutentificareButtonDisplayed() {
         LOG.info("Verify if 'Autentificare' button is displayed");
@@ -37,6 +38,16 @@ public class SignUpPage extends BasePage {
     public void typeInAdresaDeEmailField(String email) {
         LOG.info("Typing email address in 'Adresa de Email' field");
         driver.findElement(adresaDeEmailField).sendKeys(email);
+    }
+
+    public void clickContinuaButton() {
+        LOG.info("Click 'Continua' button");
+        driver.findElement(continuaButton).click();
+    }
+
+    public void clickSuntDeAcordButton() {
+        LOG.info("Click 'Sunt de acord' button");
+        driver.findElement(suntDeAcordButton).click();
     }
 
 
