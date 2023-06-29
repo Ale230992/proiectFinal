@@ -1,5 +1,7 @@
 package tests.SignUpTest;
 
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -13,7 +15,8 @@ public class SignUpTest extends BaseTest {
 
     @Test
     public void SignUp() {
-        String email = "ale.nyx23@gmail.com";
+
+        String email = RandomStringUtils.randomAlphabetic(5) + "." + RandomStringUtils.randomAlphabetic(5) + "@gmail.com";
         String password = "AleNyx2309";
         String numesiprenumele = "Nicoara Alexandra";
         String telefon = "0756 906 275";

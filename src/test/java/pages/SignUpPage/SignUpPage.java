@@ -127,6 +127,8 @@ public class SignUpPage extends BasePage {
         LOG.info("Click 'Creeaza contul' button");
         driver.findElement(creeazaContulButton).click();
     }
+
+
 }
 
 
