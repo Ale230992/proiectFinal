@@ -1,6 +1,8 @@
 package pages.CosulMeuPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -98,16 +100,22 @@ public class CosulMeuPage extends BasePage {
 
     public void clickContinuaButton() {
         LOG.info("Click 'Continua' button");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(continuaButton));
         driver.findElement(continuaButton).click();
     }
 
     public void typeInParolaTaField(String parolata) {
         LOG.info("Typing password in 'Parola ta' field");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(parolaTaField));
         driver.findElement(parolaTaField).sendKeys(parolata);
     }
 
     public void clickIntraInContButton() {
         LOG.info("Click 'Intra in Cont' button");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(intraInContButton));
         driver.findElement(intraInContButton).click();
     }
 

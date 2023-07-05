@@ -1,6 +1,9 @@
 package pages.SignUpPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -38,6 +41,7 @@ public class SignUpPage extends BasePage {
     private By persoanaFizicaRadioButton = By.xpath("//form[@id='AuthForm']/div[7]/div[2]/div[1]/div[1]/div[1]['RadioButton-icon']");
     private By creeazaContulButton = By.xpath("//form[@id='AuthForm']/div[12]/Div[1]//button[@class='Button js-authSubmitButton']");
 
+
     public boolean isAutentificareButtonDisplayed() {
         LOG.info("Verify if 'Autentificare' button is displayed");
         return driver.findElement(autentificareButton).isDisplayed();
@@ -60,11 +64,15 @@ public class SignUpPage extends BasePage {
 
     public void clickSuntDeAcordButton() {
         LOG.info("Click 'Sunt de acord' button");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(suntDeAcordButton));
         driver.findElement(suntDeAcordButton).click();
     }
 
     public void typeInAlegeOparolaField(String password) {
         LOG.info("Typing password in 'Alege o Parola' field");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(alegeOParolaField));
         driver.findElement(alegeOParolaField).sendKeys(password);
     }
 

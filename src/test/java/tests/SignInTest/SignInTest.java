@@ -18,27 +18,22 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Check 'Autentificare' button");
         Assert.assertTrue(signInPage.isAutentificareButtonDisplayed(), "Button is not displayed");
-        sleep(3000);
 
         LOG.info("Click 'Autentificare' button");
         signInPage.clickAutentificareButton();
-        sleep(3000);
 
         LOG.info("Complete the 'Adresa de Email' field");
         signInPage.typeInAdresaDeEmailField(email);
-        sleep(3000);
 
         LOG.info("Click 'Continua' button");
         signInPage.clickContinuaButton();
-        sleep(3000);
+        sleep(1000);
 
         LOG.info("Complete the 'Parola ta' field");
         signInPage.typeInParolaTaField(password);
-        sleep(3000);
 
         LOG.info("Click 'Intra in Cont' button");
         signInPage.clickIntraInContButton();
-        sleep(3000);
 
 
     }
