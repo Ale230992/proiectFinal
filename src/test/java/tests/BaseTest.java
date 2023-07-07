@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
 import pages.CosulMeuPage.CosulMeuPage;
 import pages.IesireDinContPage.IesireContPage;
+import pages.LeftSideBarPage.LeftSideBarPage;
 import pages.SearchBarPage.SearchBarPage;
 import pages.SignInPage.SignInPage;
 import pages.SignUpPage.SignUpPage;
@@ -16,6 +17,8 @@ public class BaseTest {
     public SearchBarPage searchBarPage = SearchBarPage.getInstance();
     public IesireContPage iesireContPage = IesireContPage.getInstance();
     public SignInPage signInPage = SignInPage.getInstance();
+    public LeftSideBarPage leftSideBarPage = LeftSideBarPage.getInstance();
+
 
 
     @BeforeSuite
