@@ -13,8 +13,6 @@ public class BasePage {
         LOG.info("Start test");
         System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers/chromedriver114.exe");
         driver = new ChromeDriver();
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
-////        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         String url = "https://complexart.ro/";
         driver.get(url);
 
